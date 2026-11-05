@@ -1,0 +1,17 @@
+[SddmGreeterTheme]
+Name=WhiteSur-dark-herzane
+Description=MacOS Big Sur inspired SDDM login theme for KDE Plasma 6
+Author=herzane
+Copyright=(c) 2014, David Edmundson; (c) 2026, herzane
+License=GPL-3.0
+Type=sddm-theme
+Version=1.0.1
+Github=https://github.com/herzane52/WhiteSur-dark-herzane
+Website=https://www.herzane.tr
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+Email=info@herzane.tr
+Theme-Id=WhiteSur-dark-herzane
+Theme-API=2.0
+QtVersion=6

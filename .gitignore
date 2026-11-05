@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+.directory
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# SDDM user overrides and local configuration
+theme.conf.user
+*.bak
+*.orig
+*~
+
+# Archives
+*.tar.gz
+*.tar.xz
+*.zip
