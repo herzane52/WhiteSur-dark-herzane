@@ -59,6 +59,26 @@ Ardından şuradan **WhiteSur-dark-herzane** seçin:
 
 > Sistem Ayarları → Başlangıç ve Kapatma → Giriş Ekranı (SDDM)
 
+## Temayı test etme
+
+Temayı kurmadan önizleyebilirsiniz. SDDM giriş ekranını test modunda çalıştırıp
+tema klasörünü gösterin:
+
+```bash
+cd WhiteSur-dark-herzane
+sddm-greeter-qt6 --test-mode --theme "$PWD"
+```
+
+Kurulu kopyayı test etmek için:
+
+```bash
+sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/WhiteSur-dark-herzane
+```
+
+Giriş ekranı mevcut masaüstü oturumunuzda bir pencerede açılır ve SDDM
+yapılandırmanıza dokunmaz. Kapatmak için pencereyi kapatın veya terminalde
+`Ctrl+C` tuşlarına basın.
+
 ## Kaldırma
 
 ```bash

@@ -58,6 +58,26 @@ Then select **WhiteSur-dark-herzane** in:
 
 > System Settings → Startup and Shutdown → Login Screen (SDDM)
 
+## Testing the theme
+
+You can preview the theme without installing it. Run the SDDM greeter in test
+mode and point it to the theme folder:
+
+```bash
+cd WhiteSur-dark-herzane
+sddm-greeter-qt6 --test-mode --theme "$PWD"
+```
+
+To test the installed copy instead:
+
+```bash
+sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/WhiteSur-dark-herzane
+```
+
+The greeter opens in a window inside your current desktop session and does not
+touch your SDDM configuration. Close the window or press `Ctrl+C` in the
+terminal to stop it.
+
 ## Uninstall
 
 ```bash
