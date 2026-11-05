@@ -24,7 +24,8 @@ sudo ./install.sh
 
 ## Credits
 
-WhiteSur-kde (https://github.com/vinceliuice/WhiteSur-kde)
+Based on WhiteSur-kde (https://github.com/vinceliuice/WhiteSur-kde) and the
+KDE Breeze SDDM theme.
 
 ## Links
 
