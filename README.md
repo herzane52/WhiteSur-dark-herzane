@@ -75,8 +75,7 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/WhiteSur-dark-herzan
 ```
 
 The greeter opens in a window inside your current desktop session and does not
-touch your SDDM configuration. Close the window or press `Ctrl+C` in the
-terminal to stop it.
+touch your SDDM configuration. Close the window.
 
 ## Uninstall
 

@@ -76,8 +76,7 @@ sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/WhiteSur-dark-herzan
 ```
 
 Giriş ekranı mevcut masaüstü oturumunuzda bir pencerede açılır ve SDDM
-yapılandırmanıza dokunmaz. Kapatmak için pencereyi kapatın veya terminalde
-`Ctrl+C` tuşlarına basın.
+yapılandırmanıza dokunmaz. Kapatmak için pencereyi kapatın.
 
 ## Kaldırma
 
