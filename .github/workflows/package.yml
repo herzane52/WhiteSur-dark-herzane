@@ -42,11 +42,8 @@ jobs:
             preview.png \
             assets \
             faces \
-            install.sh \
-            uninstall.sh \
             LICENSE \
-            README.md \
-            README_TR.md
+            README.md
 
           echo "ARCHIVE=$ARCHIVE" >> "$GITHUB_ENV"
           echo "VERSION=$VERSION" >> "$GITHUB_ENV"

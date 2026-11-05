@@ -12,6 +12,9 @@ Thumbs.db
 # Logs
 *.log
 
+# Local store text (not for git)
+KDE_STORE_TR.txt
+
 # SDDM user overrides and local configuration
 theme.conf.user
 *.bak
