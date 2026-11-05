@@ -1,0 +1,64 @@
+name: Package for KDE Store
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build theme archive
+        run: |
+          set -e
+
+          VERSION="${GITHUB_REF_NAME#v}"
+          if [ -z "$VERSION" ] || [ "$VERSION" = "$GITHUB_REF_NAME" ]; then
+            VERSION="$(grep '^Version=' metadata.desktop | cut -d= -f2)"
+          fi
+
+          ARCHIVE="WhiteSur-dark-herzane-${VERSION}.zip"
+
+          zip -r "$ARCHIVE" \
+            metadata.desktop \
+            Main.qml \
+            Login.qml \
+            Background.qml \
+            Input.qml \
+            SessionButton.qml \
+            KeyboardButton.qml \
+            theme.conf \
+            default-logo.svg \
+            background.png \
+            preview.png \
+            assets \
+            faces \
+            install.sh \
+            uninstall.sh \
+            LICENSE \
+            README.md \
+            README_TR.md
+
+          echo "ARCHIVE=$ARCHIVE" >> "$GITHUB_ENV"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: WhiteSur-dark-herzane-${{ env.VERSION }}
+          path: ${{ env.ARCHIVE }}
+
+      - name: Attach archive to GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ARCHIVE }}
